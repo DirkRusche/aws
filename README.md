@@ -38,7 +38,7 @@ All icons and images are owned by AWS.
 - IAM
 - WAF
 
-## Regions
+## [Regions](https://aws.amazon.com/about-aws/global-infrastructure/regions_az)
 
 ![AWS Regions worldwide](images/regions_worldwide.png)
 
@@ -66,7 +66,7 @@ All icons and images are owned by AWS.
     - Warning: `eu-central-1a` is not an unique identifier (depends on the account) [read more](https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html)
   - Traffic within one AZ is free (rule of thumb)
 
-## S3 (Simple Storage Service) ![S3 Icon](aws_icons/s3.png)
+## [S3 (Simple Storage Service)](https://aws.amazon.com/s3/) ![S3 Icon](aws_icons/s3.png)
 
 - Cloud block storage
 - Arbitrary number of files, each up to 5TB per file
@@ -84,7 +84,7 @@ All icons and images are owned by AWS.
 - S3 only knows of keys, eg. when you store `path/to/a/file` this (=`path/to/a/file`) is also the key, but the S3 management UI shows `path`, `to` and `a` as a directory
 - Versioning, Encryption, Lifecycle Management, Events
 
-## SQS (Simple Queue Service) ![SQS Icon](aws_icons/sqs.png)
+## [SQS (Simple Queue Service)](https://aws.amazon.com/sqs/) ![SQS Icon](aws_icons/sqs.png)
 
 - Decouples systems, messages have to be pulled
 - Two types
@@ -95,7 +95,7 @@ All icons and images are owned by AWS.
 - Max. message retention 14 days
 - DLQ (**d**ead **l**etter **q**ueue): unprocessable messages are automatically moved
 
-## SNS (Simple Notification Service) ![SNS Icon](aws_icons/sns.png)
+## [SNS (Simple Notification Service)](https://aws.amazon.com/sns/) ![SNS Icon](aws_icons/sns.png)
 
 - Pub / Sub (Topics)
 - Standard, FiFo
@@ -109,7 +109,7 @@ All icons and images are owned by AWS.
   - SMS
 - In comparison to SQS this is push (whereas SQS is pull)
 
-## Kinesis (Data Streams) ![Kinesis Icon](aws_icons/kinesis.png)
+## [Kinesis (Data Streams)](https://aws.amazon.com/kinesis/data-streams) ![Kinesis Icon](aws_icons/kinesis.png)
 
 - Kinesis Video Streams, **Kinesis Data Streams**, Kinesis Data Firehose, Kinesis Data Analytics
 - Real time (within 70ms)
@@ -117,7 +117,7 @@ All icons and images are owned by AWS.
 - Shard is base throughput unit (`1MB/s` write, `2MB/s` read)
 - Every event has a partition key (is used for routing onto a shard; usually user ID)
 
-## RDS (Relational Database Service) ![RDS Icon](aws_icons/rds.png)
+## [RDS (Relational Database Service)](https://aws.amazon.com/rds/) ![RDS Icon](aws_icons/rds.png)
 
 - Different engines available
   - MySQL
@@ -137,7 +137,7 @@ All icons and images are owned by AWS.
 
 **TODO**
 
-## EC2 (Elastic Compute Cloud) ![EC2 Icon](aws_icons/ec2.png)
+## [EC2 (Elastic Compute Cloud)](https://aws.amazon.com/ec2/) ![EC2 Icon](aws_icons/ec2.png)
 
 - Many AMI (**A**mazon **M**achine **I**mage) available
 - Different Instance types
@@ -159,7 +159,7 @@ All icons and images are owned by AWS.
 
 **TODO**
 
-## ECS (Elastic Container Service) ![ECS Icon](aws_icons/ecs.png)
+## [ECS (Elastic Container Service)](https://aws.amazon.com/ecs/) ![ECS Icon](aws_icons/ecs.png)
 
 - Can run on EC2 or Fargate (serverless)
 - ECS consists of clusters
@@ -169,16 +169,16 @@ All icons and images are owned by AWS.
 - Deployment ensures availability (you can set a minimum of healthy tasks in percent)
 - Failed tasks are automatically replaced
 
-### ECR (Elastic Container Registry) ![ECS Icon](aws_icons/ecr.png)
+### [ECR (Elastic Container Registry)](https://aws.amazon.com/ecr/) ![ECS Icon](aws_icons/ecr.png)
 
 Can be used to store and provide Docker Images
 
-### EKS (Elastic Kubernetes Service) ![ECS Icon](aws_icons/eks.png)
+### [EKS (Elastic Kubernetes Service)](https://aws.amazon.com/eks/) ![ECS Icon](aws_icons/eks.png)
 
 Managed Kubernetes Service
 
 
-## VPC ![VPC Icon](aws_icons/vpc.png)
+## [VPC](https://aws.amazon.com/vpc/) ![VPC Icon](aws_icons/vpc.png)
 
 **TODO**
 
@@ -190,34 +190,34 @@ Managed Kubernetes Service
 
 **TODO**
 
-## Systems Manager ![Systems Manager Icon](aws_icons/systems-manager.png)
+## [Systems Manager](https://aws.amazon.com/systems-manager/) ![Systems Manager Icon](aws_icons/systems-manager.png)
 
 **TODO**
 
-## ElastiCache ![ElastiCache Icon](aws_icons/elasticache.png)
+## [ElastiCache](https://aws.amazon.com/elasticache/) ![ElastiCache Icon](aws_icons/elasticache.png)
 
 **TODO**
 
-## Route 53 ![Route53 Icon](aws_icons/route53.png)
+## [Route 53](https://aws.amazon.com/route53/) ![Route53 Icon](aws_icons/route53.png)
 
 **TODO**
 
-## ELB ![ELB Icon](aws_icons/elb.png)
+## [ELB](https://aws.amazon.com/elasticloadbalancing/) ![ELB Icon](aws_icons/elb.png)
 
 **TODO**
 
-## Lambda ![Lambda Icon](aws_icons/lambda.png)
+## [Lambda](https://aws.amazon.com/lambda/) ![Lambda Icon](aws_icons/lambda.png)
 
 **TODO**
 
-## Cloudfront ![Cloudfront Icon](aws_icons/cloudfront.png)
+## [Cloudfront](https://aws.amazon.com/cloudfront/) ![Cloudfront Icon](aws_icons/cloudfront.png)
 
 **TODO**
 
-## IAM ![IAM Icon](aws_icons/iam.png)
+## [IAM](https://aws.amazon.com/iam/) ![IAM Icon](aws_icons/iam.png)
 
 **TODO**
 
-## WAF ![WAF Icon](aws_icons/waf.png)
+## [WAF](https://aws.amazon.com/waf/) ![WAF Icon](aws_icons/waf.png)
 
 **TODO**
