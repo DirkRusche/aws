@@ -173,7 +173,7 @@ All icons and images are owned by AWS.
 
 Can be used to store and provide Docker Images
 
-### EKR (Elastic Kubernetes Service) ![ECS Icon](aws_icons/eks.png)
+### EKS (Elastic Kubernetes Service) ![ECS Icon](aws_icons/eks.png)
 
 Managed Kubernetes Service
 
