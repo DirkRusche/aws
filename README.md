@@ -198,9 +198,13 @@ Managed Kubernetes Service
 
 **TODO**
 
-## [Systems Manager](https://aws.amazon.com/systems-manager/) ![Systems Manager Icon](aws_icons/systems-manager.png)
+## [Systems Manager (Parameter Store)](https://aws.amazon.com/systems-manager/) ![Systems Manager Icon](aws_icons/systems-manager.png)
 
-**TODO**
+- Key Value store
+- Typically used for storing passwords, configuration etc.
+- Datatypes: `String`, `StringList`, `SecureString`
+- `SecureString` uses KMS (Key Management Service) to encrypt value
+- Can be automatically retrieved by EC2, ECS, Lambda, ...
 
 ## [ElastiCache](https://aws.amazon.com/elasticache/) ![ElastiCache Icon](aws_icons/elasticache.png)
 
