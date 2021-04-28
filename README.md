@@ -208,7 +208,10 @@ Managed Kubernetes Service
 
 ## [ElastiCache](https://aws.amazon.com/elasticache/) ![ElastiCache Icon](aws_icons/elasticache.png)
 
-**TODO**
+- Redis or Memcached
+- Maintenance window for applying patches
+- Parameter group to define engine configuration values
+- Cluster, Read Replica, Multi-AZ
 
 ## [Route 53](https://aws.amazon.com/route53/) ![Route53 Icon](aws_icons/route53.png)
 
