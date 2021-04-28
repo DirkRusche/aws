@@ -215,7 +215,16 @@ Managed Kubernetes Service
 
 ## [Route 53](https://aws.amazon.com/route53/) ![Route53 Icon](aws_icons/route53.png)
 
-**TODO**
+- DNS Service
+- Different routing policies
+  - Simple: standard DNS
+  - Weighted: portion of traffic to each resource
+  - Geolocation: depending on location
+  - Latency: depending on latency
+  - Failover: when health check fails, failover to next
+  - Multivalue: chooses randomly one value
+- Private DNS within VPC
+- Alias records as own feature (like CNAME)
 
 ## [ELB](https://aws.amazon.com/elasticloadbalancing/) ![ELB Icon](aws_icons/elb.png)
 
