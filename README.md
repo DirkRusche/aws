@@ -155,9 +155,17 @@ All icons and images are owned by AWS.
 - Hibernation
 - Spot Instances, Saving Plans, Reserved Instances
 
-## ASG ![EC2 ASG Icon](aws_icons/ec2_asg.png)
+## [ASG (Auto Scaling Group)](https://aws.amazon.com/autoscaling/) ![EC2 ASG Icon](aws_icons/ec2_asg.png)
 
-**TODO**
+- Minimum, desired and maximum capacity
+- Will ensure the desired capacity at all time
+- Three different scaling strategies: manual, dynamic, scheduled
+- Manual scheduling
+  - Keep desired capacity all the time
+- Dynamic scheduling
+  - Target tracking scaling: maintain a certain value of a metric (and increase or decrease desired capacity based on that metric)
+  - Step scaling: increase or decrease desired capacity based on a set of scaling adjustments
+  - Simple scaling: increase or decreased desired capacity on a single scaling adjustment
 
 ## [ECS (Elastic Container Service)](https://aws.amazon.com/ecs/) ![ECS Icon](aws_icons/ecs.png)
 
