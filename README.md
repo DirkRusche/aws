@@ -226,9 +226,27 @@ Managed Kubernetes Service
 - Private DNS within VPC
 - Alias records as own feature (like CNAME)
 
-## [ELB](https://aws.amazon.com/elasticloadbalancing/) ![ELB Icon](aws_icons/elb.png)
+## [ELB (Elastic Load Balancing)](https://aws.amazon.com/elasticloadbalancing/) ![ELB Icon](aws_icons/elb.png)
 
-**TODO**
+- Different types
+  - ALB (Application Load Balancer)
+    - Layer 7 (Application)
+    - HTTP, HTTPS, gRPC
+    - Target types: IP, Instance, Lambda
+    - Header based routing, redirect
+    - "Standard"
+  - NLB (Network Load Balancer)
+    - Layer 4 (Transport)
+    - TCP, UDP, TLS
+    - Target types: IP, Instance
+    - Used for extreme performance / low latency
+  - GWLB (Gateway Load Balancer)
+    - Layer 3 (Network)
+    - IP
+  - CLB (Classic Load Balancer)
+    - *old, shouldn't be used for new projects*
+    - previously known as ELB (before introduction of ALB)
+- Healthchecks for targets
 
 ## [Lambda](https://aws.amazon.com/lambda/) ![Lambda Icon](aws_icons/lambda.png)
 
