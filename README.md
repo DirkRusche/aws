@@ -7,36 +7,8 @@ All icons and images are owned by AWS.
 - [ ] Describe who is the audience of this document
 - [ ] Short introduction (what is AWS, comparison to competitors)
 - [ ] S3 Storage Classes as Table?
-- [ ] Make Overview clickable
 - [ ] Sort services
 - [ ] Check EC2 section again
-
-
-## Overview
-
-- Region
-- RDS
-- SQS
-- SNS
-- Kinesis
-- EC2
-- ECS
-- ECR
-- Fargate
-- EKS
-- ASG
-- SG
-- VPC
-- Systems Manager
-- ElastiCache
-- Route 53
-- ALB
-- S3
-- Lambda
-- CloudFront
-- DynamoDB
-- IAM
-- WAF
 
 ## [Regions](https://aws.amazon.com/about-aws/global-infrastructure/regions_az)
 
