@@ -74,6 +74,7 @@ All icons and images are owned by AWS.
 - Different storage classes
   - `Standard` - Low latency and high throughput
   - `Intelligent Tiering` - Automatically optimizes storage costs (dependencing on access pattern)
+    ![S3 Lifecycle of Intelligent Tiering](images/s3_intelligent_tiering.png)
   - `Standard-IA` (IA = Infrequent-Access) - Same as Standard but less availability 
   - `One Zone-IA` - Only one AZ -> less availability
   - `Glacier` - Very cheap; retrieval time at least a few minutes
@@ -109,6 +110,8 @@ All icons and images are owned by AWS.
   - SMS
 - In comparison to SQS this is push (whereas SQS is pull)
 
+![SNS overview](images/sns.png)
+
 ## [Kinesis (Data Streams)](https://aws.amazon.com/kinesis/data-streams) ![Kinesis Icon](aws_icons/kinesis.png)
 
 - Kinesis Video Streams, **Kinesis Data Streams**, Kinesis Data Firehose, Kinesis Data Analytics
@@ -116,6 +119,8 @@ All icons and images are owned by AWS.
 - Multiple producer, multiple consumer
 - Shard is base throughput unit (`1MB/s` write, `2MB/s` read)
 - Every event has a partition key (is used for routing onto a shard; usually user ID)
+
+![Kinesis Overview](images/kinesis_data_streams.png)
 
 ## [RDS (Relational Database Service)](https://aws.amazon.com/rds/) ![RDS Icon](aws_icons/rds.png)
 
@@ -166,6 +171,9 @@ All icons and images are owned by AWS.
   - Target tracking scaling: maintain a certain value of a metric (and increase or decrease desired capacity based on that metric)
   - Step scaling: increase or decrease desired capacity based on a set of scaling adjustments
   - Simple scaling: increase or decreased desired capacity on a single scaling adjustment
+
+Example of scaling based on a custom metric in connection with SQS:
+![ASG example with a custom metric](images/asg_example.png)
 
 ## [ECS (Elastic Container Service)](https://aws.amazon.com/ecs/) ![ECS Icon](aws_icons/ecs.png)
 
@@ -300,6 +308,8 @@ Flow within a network, passing through SG, NACL, ...
   - Therefore, it can serve static and dynamic content
 - Routing can be customized with `Behavior`
 
+Example of dynamic and static serving with CloudFront:
+![CloudFront example](images/cloudfront_example.png)
 
 ## [IAM (Identity and Access Management)](https://aws.amazon.com/iam/) ![IAM Icon](aws_icons/iam.png)
 
