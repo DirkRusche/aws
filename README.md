@@ -207,19 +207,16 @@ Managed Kubernetes Service
 - `VPC Endpoint` - private connection to other services
 - `Egress-only Internet Gateway` - egress only access for IPv6 traffic (like NAT for IPv4)
 
-Example of a VPC with an Internet Gateway:
-
+Example of a VPC with an Internet Gateway:  
 ![VPC with internet gateway](images/vpc_internet_gateway.png)
 
-VPN connection between AWS and a corporate network is possible:
-
+VPN connection between AWS and a corporate network is possible:  
 ![VPC with VPN to corporate network](images/vpc_vpn_corporate.png)
 
-PrivateLink can be used to access another AWS service without using public internet: (PrivateLink uses VPC Endpoint)
+PrivateLink can be used to access another AWS service without using public internet: (PrivateLink uses VPC Endpoint)  
 ![VPC with PrivateLink](images/vpc_privatelink.png)
 
-Flow within a network, passing through SG, NACL, ...
-
+Flow within a network, passing through SG, NACL, ...  
 ![VPC flow in a network](images/vpc_nacl_sg.png)
 
 ### SG (Security Group)
