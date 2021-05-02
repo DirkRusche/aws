@@ -186,17 +186,56 @@ Can be used to store and provide Docker Images
 Managed Kubernetes Service
 
 
-## [VPC](https://aws.amazon.com/vpc/) ![VPC Icon](aws_icons/vpc.png)
+## [VPC (Virtual Private Cloud)](https://aws.amazon.com/vpc/) ![VPC Icon](aws_icons/vpc.png)
 
-**TODO**
+- Every VPC has its own IP address space
+- `Subnet` - a segment of a VPC IP address space
+  - Instances in a private subnet do not have a public IP address
+  - Instances in a public subnet do have a public IP address
+- `Internet Gateway` - access to the public Internet (and access from the Internet)
+- `NAT Gateway` - access to the internet from private subnets (NAT = Network Address Translation)
+- `Virtual private gateway` - endpoint for a VPN connection
+- `Peering Connection` - allows communication between two peered VPCs (not transitive)
+- `VPC Endpoint` - private connection to other services
+- `Egress-only Internet Gateway` - egress only access for IPv6 traffic (like NAT for IPv4)
+
+Example of a VPC with an Internet Gateway:
+
+![VPC with internet gateway](images/vpc_internet_gateway.png)
+
+VPN connection between AWS and a corporate network is possible:
+
+![VPC with VPN to corporate network](images/vpc_vpn_corporate.png)
+
+PrivateLink can be used to access another AWS service without using public internet: (PrivateLink uses VPC Endpoint)
+![VPC with PrivateLink](images/vpc_privatelink.png)
+
+Flow within a network, passing through SG, NACL, ...
+
+![VPC flow in a network](images/vpc_nacl_sg.png)
 
 ### SG (Security Group)
 
-**TODO**
+- ALl traffic is denied by default (unless allowed by a rule)
+- A rule can only allow traffic and not deny it
+- SGs are stateful
+  - When a rule allows outgoing traffic, the response is allowed too regardless of the incoming rules
+  - When a rule allows incoming traffic, the response is allowed too regardless of the outgoing rules
+- Instances within the same security group can't communicate with each other (unless allowed by a rule)
+- A source for a rule can be:
+  - a security group
+  - IPv4 CIDR block or a single IPv4
+  - IPv6 CIDR block or a single IPv6
+  - or a prefix list ID
+- You can specify the protocol (TCP, UDP, IDMP), and a port range for a rule
 
-### NACL
 
-**TODO**
+### NACL (Network Access Control List)
+
+- A rule can (in contrast to a SG) deny traffic
+- A rule has a number
+  - Evaluation of rules start with the lowest number
+  - Evaluation stops as soon as a rule matches traffic
 
 ## [Systems Manager (Parameter Store)](https://aws.amazon.com/systems-manager/) ![Systems Manager Icon](aws_icons/systems-manager.png)
 
