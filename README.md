@@ -33,7 +33,7 @@ All icons and images are owned by AWS.
 - ALB
 - S3
 - Lambda
-- Cloudfront
+- CloudFront
 - DynamoDB
 - IAM
 - WAF
@@ -252,9 +252,15 @@ Managed Kubernetes Service
 
 **TODO**
 
-## [Cloudfront](https://aws.amazon.com/cloudfront/) ![Cloudfront Icon](aws_icons/cloudfront.png)
+## [CloudFront](https://aws.amazon.com/cloudfront/) ![CloudFront Icon](aws_icons/cloudfront.png)
 
-**TODO**
+- CDN (Content Delivery Network)
+- Improves latency by hosting at different PoPs (Point of Presence) (AWS name: Edge Location)
+  ![Edge Locations of CloudFront](images/edge_locations.jpg)
+- Can work with S3, EC2, ELB or any HTTP origin
+  - Therefore, it can serve static and dynamic content
+- Routing can be customized with `Behavior`
+
 
 ## [IAM (Identity and Access Management)](https://aws.amazon.com/iam/) ![IAM Icon](aws_icons/iam.png)
 
