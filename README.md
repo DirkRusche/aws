@@ -256,9 +256,66 @@ Managed Kubernetes Service
 
 **TODO**
 
-## [IAM](https://aws.amazon.com/iam/) ![IAM Icon](aws_icons/iam.png)
+## [IAM (Identity and Access Management)](https://aws.amazon.com/iam/) ![IAM Icon](aws_icons/iam.png)
 
-**TODO**
+- Users, groups and roles
+  - Users = people or services (can have credentials)
+  - Groups = container for users (can belong to another group)
+  - Roles = services
+- Policies are permissions to do something
+  - can be attached to users, groups and roles
+  - Use Policy Simulator to check and validate effects of policies
+- Roles can be assumed
+  ![Flow diagram of assuming a role](images/assume_role.png)
+- Permissions hierarchy:
+  1. Explicit deny
+  2. Explicit allow
+  3. Implicit deny
+
+### Policy
+
+Example Policy:
+
+```json
+{
+  "Version": "2012-10-17",
+  "Id": "some-unique-id",
+  "Statement": {
+    "Sid": "1",
+    "Effect": "Allow",
+    "Principal": { "AWS": "arn:aws:iam::123456789012:user/dirk" },
+    "Action": [
+      "s3:PutObject",
+      "s3:Get*"
+    ],
+    "Resource": "arn:aws:s3:::my-bucket/*",
+    "Condition": {
+      "DateGreaterThan": {
+        "aws:CurrentTime": "2021-12-02T13:37:42Z"
+      }
+    }
+  }
+}
+```
+
+Fields:
+- [`Version`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html) - defines language syntax (two valid values `2012-10-17`, `2008-10-17`)
+- [`Id`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_id.html) - identifier for policy, used by different services
+- [`Sid`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_sid.html) - short for `statement ID`, identifier for statement
+- [`Effect`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_effect.html) - does this statement allow or deny something? (two valid values `Allow`, `Deny`)
+- [`Principal`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html) - specifies a principal that is allowed or denied access to a resource (when not attached to a user, group or role)
+  - whole aws account: `"Principal": { "AWS": "arn:aws:iam::123456789012:root" }`
+  - a specific user: `"Principal": { "AWS": "arn:aws:iam::AWS-account-ID:user/user-name" }`
+  - an IAM role: `"Principal": { "AWS": "arn:aws:iam::AWS-account-ID:role/role-name" }`
+  - an assumed-role: `"Principal": { "AWS": "arn:aws:sts::AWS-account-ID:assumed-role/role-name/role-session-name" }`
+  - a aws service: `"Principal": { "Service" : [ "ecs.amazonaws.com" ] }`
+  - every one: `"Principal": "*"`
+  - *there are options for federated web identities and users*
+- [`Action`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_action.html) - which actions are allowed or denied (e.g. `sqs:SendMessage`, `s3:PutObject`)
+- [`Resource`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_resource.html) - to which resources this policy applies
+- [`Condition`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) - additional conditions which must be true for the policy to be applied
+- *there are also `NotPrincipal`, `NotAction` and `NotResource` but be cautious with them*
+
 
 ## [WAF](https://aws.amazon.com/waf/) ![WAF Icon](aws_icons/waf.png)
 
