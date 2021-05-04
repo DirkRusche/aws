@@ -5,7 +5,6 @@ All icons and images are owned by AWS.
 ## Todos
 
 - [ ] Describe who is the audience of this document
-- [ ] S3 Storage Classes as Table?
 - [ ] Sort services
 - [ ] Check EC2 section again
 
@@ -53,6 +52,7 @@ All icons and images are owned by AWS.
 - Cloud block storage
 - Arbitrary number of files, each up to 5TB per file
 - `99.999999999%` (11 9s) durability (= 10 million objects saved over 10,000 years -> expectation: 1 is lost)
+- `99.9%` availability SLA (but designed for `99.99%`) in `Standard`
 - Different storage classes
   - `Standard` - Low latency and high throughput
   - `Intelligent Tiering` - Automatically optimizes storage costs (dependencing on access pattern)
@@ -66,6 +66,8 @@ All icons and images are owned by AWS.
     - Glacier Deep Archive = `$0.0018/GB` (92,65% less)
 - S3 only knows of keys, eg. when you store `path/to/a/file` this (=`path/to/a/file`) is also the key, but the S3 management UI shows `path`, `to` and `a` as a directory
 - Versioning, Encryption, Lifecycle Management, Events
+
+![S3 Performance Overview](images/s3_table.png)
 
 ## [SQS (Simple Queue Service)](https://aws.amazon.com/sqs/) ![SQS Icon](aws_icons/sqs.png)
 
