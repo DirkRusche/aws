@@ -1,14 +1,24 @@
-# AWS
+# Introduction into AWS
 
 All icons and images are owned by AWS.
 
 ## Todos
 
 - [ ] Describe who is the audience of this document
-- [ ] Short introduction (what is AWS, comparison to competitors)
 - [ ] S3 Storage Classes as Table?
 - [ ] Sort services
 - [ ] Check EC2 section again
+
+## AWS
+
+- Dominant cloud computing provider
+- Founded 2002, first cloud service (S3) in 2006
+- Annual revenue in 2020: $46 billion
+  - Fun fact:  
+    Amazon annual revenue 2020: $280 billion, EBIT $23 billion (including AWS)  
+    AWS EBIT was $13.5 billion (that is 58%❗️)  
+    *[source: Amazon report 2020, p25 and p26](https://s2.q4cdn.com/299287126/files/doc_financials/2021/ar/Amazon-2020-Annual-Report.pdf)*
+- AWS owns around ~32% off the cloud market, its competitors are Microsoft Azure (18%) and Google Cloud (9%)
 
 ## [Regions](https://aws.amazon.com/about-aws/global-infrastructure/regions_az)
 
