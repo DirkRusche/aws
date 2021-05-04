@@ -28,7 +28,7 @@ All icons and images are owned by AWS.
 
 - Global Infrastructure
 - Region = Location
-- Region consists of multiple AZs (**A**vailability **Z**ones)
+- Region consists of multiple `AZs` (Availability Zones)
 - Near us (Germany): 
   
   Code | Name | Country | Since
@@ -46,7 +46,7 @@ All icons and images are owned by AWS.
   - Marked by a letter behind region code
     - eg.: `eu-central-1[a,b,c]`
     - Warning: `eu-central-1a` is not an unique identifier (depends on the account) [read more](https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html)
-  - Traffic within one AZ is free (rule of thumb)
+  - Traffic within one `AZ` is free (rule of thumb)
 
 ## [S3 (Simple Storage Service)](https://aws.amazon.com/s3/) ![S3 Icon](aws_icons/s3.png)
 
@@ -76,7 +76,7 @@ All icons and images are owned by AWS.
 - Visibility timeout while processing (after message pull) (max. 12 hours)
 - Batching of messages possible, max payload `256KB`
 - Max. message retention 14 days
-- DLQ (**d**ead **l**etter **q**ueue): unprocessable messages are automatically moved
+- `DLQ` (Dead Letter Queue): unprocessable messages are automatically moved
 
 ## [SNS (Simple Notification Service)](https://aws.amazon.com/sns/) ![SNS Icon](aws_icons/sns.png)
 
@@ -126,7 +126,7 @@ All icons and images are owned by AWS.
 
 ## [EC2 (Elastic Compute Cloud)](https://aws.amazon.com/ec2/) ![EC2 Icon](aws_icons/ec2.png)
 
-- Many AMI (**A**mazon **M**achine **I**mage) available
+- Many `AMI` (Amazon Machine Image) available
 - Different Instance types
   - General Purposes
   - Compute Optimized
@@ -137,8 +137,8 @@ All icons and images are owned by AWS.
   - Max is `U-24TB1 Metal`: `448` vCPU, `24576GB` RAM
 - Storage options
   - Instance Storage - fastest
-  - EBS (Elastic Block Storage) - can only be attached to one instance
-  - EFS (Elastic File System) - can be shared by multiple instances
+  - `EBS` (Elastic Block Storage) - can only be attached to one instance
+  - `EFS` (Elastic File System) - can be shared by multiple instances
 - Hibernation
 - Spot Instances, Saving Plans, Reserved Instances
 
@@ -159,8 +159,8 @@ Example of scaling based on a custom metric in connection with SQS:
 
 ## [ECS (Elastic Container Service)](https://aws.amazon.com/ecs/) ![ECS Icon](aws_icons/ecs.png)
 
-- Can run on EC2 or Fargate (serverless)
-- ECS consists of clusters
+- Can run on `EC2` or `Fargate` (serverless)
+- `ECS` consists of clusters
   - Cluster contains Services
   - Service contains Tasks (=Instances) (Kubernetes: Pod)
   - Task contains Containers
@@ -205,7 +205,7 @@ Flow within a network, passing through SG, NACL, ...
 
 - ALl traffic is denied by default (unless allowed by a rule)
 - A rule can only allow traffic and not deny it
-- SGs are stateful
+- `SGs` are stateful
   - When a rule allows outgoing traffic, the response is allowed too regardless of the incoming rules
   - When a rule allows incoming traffic, the response is allowed too regardless of the outgoing rules
 - Instances within the same security group can't communicate with each other (unless allowed by a rule)
@@ -243,33 +243,33 @@ Flow within a network, passing through SG, NACL, ...
 
 - DNS Service
 - Different routing policies
-  - Simple: standard DNS
-  - Weighted: portion of traffic to each resource
-  - Geolocation: depending on location
-  - Latency: depending on latency
-  - Failover: when health check fails, failover to next
-  - Multivalue: chooses randomly one value
+  - `Simple`: standard DNS
+  - `Weighted`: portion of traffic to each resource
+  - `Geolocation`: depending on location
+  - `Latency`: depending on latency
+  - `Failover`: when health check fails, failover to next
+  - `Multivalue`: chooses randomly one value
 - Private DNS within VPC
 - Alias records as own feature (like CNAME)
 
 ## [ELB (Elastic Load Balancing)](https://aws.amazon.com/elasticloadbalancing/) ![ELB Icon](aws_icons/elb.png)
 
 - Different types
-  - ALB (Application Load Balancer)
+  - `ALB` (Application Load Balancer)
     - Layer 7 (Application)
     - HTTP, HTTPS, gRPC
     - Target types: IP, Instance, Lambda
     - Header based routing, redirect
     - "Standard"
-  - NLB (Network Load Balancer)
+  - `NLB` (Network Load Balancer)
     - Layer 4 (Transport)
     - TCP, UDP, TLS
     - Target types: IP, Instance
     - Used for extreme performance / low latency
-  - GWLB (Gateway Load Balancer)
+  - `GWLB` (Gateway Load Balancer)
     - Layer 3 (Network)
     - IP
-  - CLB (Classic Load Balancer)
+  - `CLB` (Classic Load Balancer)
     - *old, shouldn't be used for new projects*
     - previously known as ELB (before introduction of ALB)
 - Healthchecks for targets
@@ -282,11 +282,11 @@ Flow within a network, passing through SG, NACL, ...
 - Maximal runtime is 15 minutes
 - Define the needed memory (between 128 MB and 10,240 MB) - the compute power is scaled accordingly (1,769 MB = 1 vCPU)
 - (Beware cold starts) *improved significantly*
-- Failed events can be sent into a DLQ (Dead Letter Queue)
+- Failed events can be sent into a `DLQ` (Dead Letter Queue)
 
 ## [CloudFront](https://aws.amazon.com/cloudfront/) ![CloudFront Icon](aws_icons/cloudfront.png)
 
-- CDN (Content Delivery Network)
+- `CDN` (Content Delivery Network)
 - Improves latency by hosting at different PoPs (Point of Presence) (AWS name: Edge Location)
   ![Edge Locations of CloudFront](images/edge_locations.jpg)
 - Can work with S3, EC2, ELB or any HTTP origin
