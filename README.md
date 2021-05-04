@@ -73,7 +73,7 @@ All icons and images are owned by AWS.
 - Two types
   - `Standard`: 3,000 messages / sec, at least once (occasionally more than one time), best effort ordering
   - `FiFo`: 300 messages / sec, exactly once, **f**irst **i**n **f**irst **o**ut
-- Visibility timeout while processing (after message pull)
+- Visibility timeout while processing (after message pull) (max. 12 hours)
 - Batching of messages possible, max payload `256KB`
 - Max. message retention 14 days
 - DLQ (**d**ead **l**etter **q**ueue): unprocessable messages are automatically moved
