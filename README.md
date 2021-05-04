@@ -276,7 +276,13 @@ Flow within a network, passing through SG, NACL, ...
 
 ## [Lambda](https://aws.amazon.com/lambda/) ![Lambda Icon](aws_icons/lambda.png)
 
-**TODO**
+- Runs code without provisioning or managing servers, pay only for the time your code runs
+- Supports different languages (`Java`, `Go`, `PowerShell`, `Node.js`, `C#,` `Python`, and `Ruby`)
+- Can be triggered by different services (e.g. ELB, S3 Event, ...)
+- Maximal runtime is 15 minutes
+- Define the needed memory (between 128 MB and 10,240 MB) - the compute power is scaled accordingly (1,769 MB = 1 vCPU)
+- (Beware cold starts) *improved significantly*
+- Failed events can be sent into a DLQ (Dead Letter Queue)
 
 ## [CloudFront](https://aws.amazon.com/cloudfront/) ![CloudFront Icon](aws_icons/cloudfront.png)
 
