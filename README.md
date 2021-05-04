@@ -361,3 +361,16 @@ Example Policy:
 ## [WAF](https://aws.amazon.com/waf/) ![WAF Icon](aws_icons/waf.png)
 
 **TODO**
+
+
+## [Certification](https://aws.amazon.com/certification)
+
+![Overview AWS Certification](images/certification.png)
+
+For example `Cloud Practitioner`:
+
+- 65 questions in English (or Indonesian, Japanese, Korean or Simplified Chinese)
+- 90 minutes
+- Price $100
+
+Recommendation: Udemy course from [`Stephane Maarek`](https://www.udemy.com/user/stephane-maarek/) is a good starting point
