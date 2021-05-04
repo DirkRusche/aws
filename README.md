@@ -338,17 +338,16 @@ Example Policy:
 }
 ```
 
-Fields:
 - [`Version`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html) - defines language syntax (two valid values `2012-10-17`, `2008-10-17`)
 - [`Id`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_id.html) - identifier for policy, used by different services
 - [`Sid`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_sid.html) - short for `statement ID`, identifier for statement
 - [`Effect`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_effect.html) - does this statement allow or deny something? (two valid values `Allow`, `Deny`)
 - [`Principal`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html) - specifies a principal that is allowed or denied access to a resource (when not attached to a user, group or role)
-  - whole aws account: `"Principal": { "AWS": "arn:aws:iam::123456789012:root" }`
+  - whole AWS account: `"Principal": { "AWS": "arn:aws:iam::123456789012:root" }`
   - a specific user: `"Principal": { "AWS": "arn:aws:iam::AWS-account-ID:user/user-name" }`
   - an IAM role: `"Principal": { "AWS": "arn:aws:iam::AWS-account-ID:role/role-name" }`
   - an assumed-role: `"Principal": { "AWS": "arn:aws:sts::AWS-account-ID:assumed-role/role-name/role-session-name" }`
-  - a aws service: `"Principal": { "Service" : [ "ecs.amazonaws.com" ] }`
+  - an AWS service: `"Principal": { "Service" : [ "ecs.amazonaws.com" ] }`
   - every one: `"Principal": "*"`
   - *there are options for federated web identities and users*
 - [`Action`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_action.html) - which actions are allowed or denied (e.g. `sqs:SendMessage`, `s3:PutObject`)
