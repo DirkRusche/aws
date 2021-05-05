@@ -1,4 +1,4 @@
-# Introduction into AWS
+# Introduction into Amazon Web Services (AWS)
 
 All icons and images are owned by AWS.
 
@@ -8,7 +8,31 @@ All icons and images are owned by AWS.
 - [ ] Sort services
 - [ ] Check EC2 section again
 
-## AWS
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Regions](#regions)
+- [S3](#s3-simple-storage-service-)
+- [SQS](#sqs-simple-queue-service-)
+- [SNS](#sns-simple-notification-service-)
+- [Kinesis](#kinesis-data-streams-)
+- [RDS](#rds-relational-database-service-)
+- [🚧 DynamoDB](#dynamodb-)
+- [EC2](#ec2-elastic-compute-cloud-)
+- [ASG](#asg-auto-scaling-group-)
+- [ECS](#ecs-elastic-container-service-)
+- [VPC](#vpc-virtual-private-cloud-)
+- [Parameter Store](#systems-manager-parameter-store-)
+- [ElastiCache](#elasticache-)
+- [Route 53](#route-53-)
+- [ELB](#elb-elastic-load-balancing-)
+- [Lambda](#lambda-)
+- [CloudFront](#cloudfront-)
+- [IAM](#iam-identity-and-access-management-)
+- [🚧 WAF](#waf-)
+- [Certification](#certification)
+
+## Introduction
 
 - Dominant cloud computing provider
 - Founded 2002, first cloud service (S3) in 2006
@@ -124,7 +148,7 @@ All icons and images are owned by AWS.
 
 ## [DynamoDB](https://aws.amazon.com/dynamodb/) ![DynamoDB Icon](aws_icons/dynamodb.png)
 
-**TODO**
+🚧 **TODO**
 
 ## [EC2 (Elastic Compute Cloud)](https://aws.amazon.com/ec2/) ![EC2 Icon](aws_icons/ec2.png)
 
@@ -139,8 +163,8 @@ All icons and images are owned by AWS.
   - Max is `U-24TB1 Metal`: `448` vCPU, `24576GB` RAM
 - Storage options
   - Instance Storage - fastest
-  - `EBS` (Elastic Block Storage) - can only be attached to one instance
-  - `EFS` (Elastic File System) - can be shared by multiple instances
+  - [`EBS` (Elastic Block Storage)](https://aws.amazon.com/ebs/) - can only be attached to one instance
+  - [`EFS` (Elastic File System)](https://aws.amazon.com/efs/) - can be shared by multiple instances
 - Hibernation
 - Spot Instances, Saving Plans, Reserved Instances
 
@@ -181,15 +205,15 @@ Managed Kubernetes Service
 ## [VPC (Virtual Private Cloud)](https://aws.amazon.com/vpc/) ![VPC Icon](aws_icons/vpc.png)
 
 - Every VPC has its own IP address space
-- `Subnet` - a segment of a VPC IP address space
+- `Subnet` a segment of a VPC IP address space
   - Instances in a private subnet do not have a public IP address
   - Instances in a public subnet do have a public IP address
-- `Internet Gateway` - access to the public Internet (and access from the Internet)
-- `NAT Gateway` - access to the internet from private subnets (NAT = Network Address Translation)
-- `Virtual private gateway` - endpoint for a VPN connection
-- `Peering Connection` - allows communication between two peered VPCs (not transitive)
-- `VPC Endpoint` - private connection to other services
-- `Egress-only Internet Gateway` - egress only access for IPv6 traffic (like NAT for IPv4)
+- `Internet Gateway` access to the public Internet (and access from the Internet)
+- `NAT Gateway` access to the internet from private subnets (NAT = Network Address Translation)
+- `Virtual private gateway` endpoint for a VPN connection
+- `Peering Connection` allows communication between two peered VPCs (not transitive)
+- `VPC Endpoint` private connection to other services
+- `Egress-only Internet Gateway` egress only access for IPv6 traffic (like NAT for IPv4)
 
 Example of a VPC with an Internet Gateway:  
 ![VPC with internet gateway](images/vpc_internet_gateway.png)
@@ -203,7 +227,7 @@ PrivateLink can be used to access another AWS service without using public inter
 Flow within a network, passing through SG, NACL, ...  
 ![VPC flow in a network](images/vpc_nacl_sg.png)
 
-### SG (Security Group)
+### [SG (Security Group)](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html)
 
 - ALl traffic is denied by default (unless allowed by a rule)
 - A rule can only allow traffic and not deny it
@@ -219,7 +243,7 @@ Flow within a network, passing through SG, NACL, ...
 - You can specify the protocol (TCP, UDP, IDMP), and a port range for a rule
 
 
-### NACL (Network Access Control List)
+### [NACL (Network Access Control List)](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
 
 - A rule can (in contrast to a SG) deny traffic
 - A rule has a number
@@ -308,6 +332,7 @@ Example of dynamic and static serving with CloudFront:
   - can be attached to users, groups and roles
   - Use Policy Simulator to check and validate effects of policies
 - Roles can be assumed
+  
   ![Flow diagram of assuming a role](images/assume_role.png)
 - Permissions hierarchy:
   1. Explicit deny
@@ -355,12 +380,12 @@ Example Policy:
 - [`Action`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_action.html) - which actions are allowed or denied (e.g. `sqs:SendMessage`, `s3:PutObject`)
 - [`Resource`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_resource.html) - to which resources this policy applies
 - [`Condition`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html) - additional conditions which must be true for the policy to be applied
-- *there are also `NotPrincipal`, `NotAction` and `NotResource` but be cautious with them*
+- *there are also [`NotPrincipal`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_notprincipal.html), [`NotAction`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_notaction.html) and [`NotResource`](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_notresource.html) but be cautious with them*
 
 
 ## [WAF](https://aws.amazon.com/waf/) ![WAF Icon](aws_icons/waf.png)
 
-**TODO**
+🚧 **TODO**
 
 
 ## [Certification](https://aws.amazon.com/certification)
