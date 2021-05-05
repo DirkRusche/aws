@@ -56,15 +56,15 @@ EMEA (Europe Middle East Africa):
 - Region consists of multiple `AZs` (Availability Zones)
 - Near us (Germany): 
   
-  Code | Name | Country | Since
-  --- | --- | :---: | :---:
-  `eu-central-1` | Frankfurt | Germany 🇩🇪 | 2014
-  `eu-west-1` | Ireland | Ireland 🇮🇪 | 2007
-  `eu-west-2` | London | UK 🇬🇧 | 2016
-  `eu-west-3` | Paris | France 🇫🇷 | 2017
-  `eu-south-1` | Milan | Italy 🇮🇹 | 2020
-  `eu-north-1` | Stockholm | Sweden 🇸🇪 | 2018
-  `eu-east-1` | ? | Spain 🇪🇸 | Upcoming (2022/2023)
+  Code | Name / City | Country | Since
+  --- | --- | :--- | :---:
+  `eu-central-1` | Frankfurt | 🇩🇪 Germany | 2014
+  `eu-west-1` | Ireland | 🇮🇪 Ireland | 2007
+  `eu-west-2` | London | 🇬🇧 UK | 2016
+  `eu-west-3` | Paris | 🇫🇷 France | 2017
+  `eu-south-1` | Milan | 🇮🇹 Italy | 2020
+  `eu-north-1` | Stockholm | 🇸🇪 Sweden | 2018
+  `eu-east-1` | ? | 🇪🇸 Spain | Upcoming (2022/2023)
 
 - AZs are physically separated from each other
   - Connected via low latency links
