@@ -45,8 +45,10 @@ All icons and images are owned by AWS.
 
 ## [Regions](https://aws.amazon.com/about-aws/global-infrastructure/regions_az)
 
+Worldwide:  
 ![AWS Regions worldwide](images/regions_worldwide.png)
 
+EMEA (Europe Middle East Africa):  
 ![AWS Regions EMEA](images/regions_emea.png)
 
 - Global Infrastructure
@@ -79,7 +81,7 @@ All icons and images are owned by AWS.
 - `99.9%` availability SLA (but designed for `99.99%`) in `Standard`
 - Different storage classes
   - `Standard` - Low latency and high throughput
-  - `Intelligent Tiering` - Automatically optimizes storage costs (depending on access pattern)
+  - `Intelligent Tiering` - Automatically optimizes storage costs (depending on access pattern)  
     ![S3 Lifecycle of Intelligent Tiering](images/s3_intelligent_tiering.png)
   - `Standard-IA` (IA = Infrequent-Access) - Same as Standard but less availability 
   - `One Zone-IA` - Only one AZ -> less availability
@@ -108,7 +110,8 @@ All icons and images are owned by AWS.
 
 - Pub / Sub (Topics)
 - Standard, FiFo
-- Filtering, Fanout
+- Filtering, Fanout  
+  ![SNS Fanout into SQS](images/sns_fanout.png)
 - Push to
   - Lambda
   - SQS
@@ -128,7 +131,7 @@ All icons and images are owned by AWS.
 - Shard is base throughput unit (`1MB/s` write, `2MB/s` read)
 - Every event has a partition key (is used for routing onto a shard; usually user ID)
 
-![Kinesis Overview](images/kinesis_data_streams.png)
+![Kinesis Data Stream](images/kinesis.png)
 
 ## [RDS (Relational Database Service)](https://aws.amazon.com/rds/) ![RDS Icon](aws_icons/rds.png)
 
@@ -165,10 +168,10 @@ All icons and images are owned by AWS.
   - Instance Storage - fastest
   - [`EBS` (Elastic Block Storage)](https://aws.amazon.com/ebs/) - can only be attached to one instance
   - [`EFS` (Elastic File System)](https://aws.amazon.com/efs/) - can be shared by multiple instances
-- [Hibernation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) - write RAM into EBS and start from that again
+- [Hibernation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) - write RAM into EBS and start from that again  
   ![EC2 Hibernation Flow](images/ec2_hibernation.png)
 - [Spot Instances](https://aws.amazon.com/ec2/spot/) - spare capacity, can be terminated within 2 minute notice (save up to 90% off On-Demand price)
-- [Saving Plans](https://aws.amazon.com/savingsplans/) - commitment on a certain $/hour usage for 1 or 3 years (all, partial or no upfront payment) (save up to 72%)
+- [Saving Plans](https://aws.amazon.com/savingsplans/) - commitment on a certain $/hour usage for 1 or 3 years (all, partial or no upfront payment) (save up to 72%)  
   ![Saving Plans Flow](images/ec2_saving_plans.png)
 - Reserved Instances - commitment on a certain instance type or family (save up to 72%)
 
@@ -193,9 +196,12 @@ Example of scaling based on a custom metric in connection with SQS:
 - `ECS` consists of clusters
   - Cluster contains Services
   - Service contains Tasks (=Instances) (Kubernetes: Pod)
-  - Task contains Containers
+  - Task contains Containers  
+  ![ECS Overview](images/ecs_overview.png)
 - Deployment ensures availability (you can set a minimum of healthy tasks in percent)
-- Failed tasks are automatically replaced
+- Failed tasks are automatically replaced  
+  ![ECS Scheduler Flow](images/ecs_scheduler.png)
+
 
 ### [ECR (Elastic Container Registry)](https://aws.amazon.com/ecr/) ![ECS Icon](aws_icons/ecr.png)
 
@@ -262,6 +268,9 @@ Flow within a network, passing through SG, NACL, ...
 - `SecureString` uses KMS (Key Management Service) to encrypt value
 - Can be automatically retrieved by EC2, ECS, Lambda, ...
 
+Overview:  
+![Systems Manager Overview](images/systems-manager_overview.png)
+
 ## [ElastiCache](https://aws.amazon.com/elasticache/) ![ElastiCache Icon](aws_icons/elasticache.png)
 
 - Redis or Memcached
@@ -323,7 +332,10 @@ Flow within a network, passing through SG, NACL, ...
   - Therefore, it can serve static and dynamic content
 - Routing can be customized with `Behavior`
 
-Example of dynamic and static serving with CloudFront:
+Example of CloudFront serving a file from S3 as origin:  
+![Example of CloudFront serving a file](images/cloudfront_serving.png)
+
+Example of dynamic and static serving with CloudFront:  
 ![CloudFront example](images/cloudfront_example.png)
 
 ## [IAM (Identity and Access Management)](https://aws.amazon.com/iam/) ![IAM Icon](aws_icons/iam.png)
@@ -335,9 +347,10 @@ Example of dynamic and static serving with CloudFront:
 - Policies are permissions to do something
   - can be attached to users, groups and roles
   - Use Policy Simulator to check and validate effects of policies
-- Roles can be assumed
-  
+- Roles can be assumed  
   ![Flow diagram of assuming a role](images/assume_role.png)
+- Federation of users with some kind of directory possible  
+  ![IAM Federation of Users](images/iam_federation.png)
 - Permissions hierarchy:
   1. Explicit deny
   2. Explicit allow
