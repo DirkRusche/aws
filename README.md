@@ -31,6 +31,7 @@ All icons and images are owned by AWS.
 - [🚧 WAF](#waf-)
 - [ARN](#arn-amazon-resource-names)
 - [Certification](#certification)
+- [Links](#links)
 
 ## Introduction
 
@@ -436,3 +437,11 @@ For example `Cloud Practitioner`:
 - Price $100
 
 Recommendation: Udemy course from [`Stephane Maarek`](https://www.udemy.com/user/stephane-maarek/) is a good starting point
+
+## Links
+
+- [AWS Glossary](https://docs.aws.amazon.com/general/latest/gr/glos-chap.html)
+- [AWS Blog](https://aws.amazon.com/blogs/)
+- [awesome AWS list](https://github.com/donnemartin/awesome-aws)
+- [Open Guide to Amazon Web Services](https://github.com/open-guides/og-aws)
+- [acloudguru.com Blog](https://acloudguru.com/blog)
