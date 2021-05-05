@@ -29,6 +29,7 @@ All icons and images are owned by AWS.
 - [CloudFront](#cloudfront-)
 - [IAM](#iam-identity-and-access-management-)
 - [🚧 WAF](#waf-)
+- [ARN](#arn-amazon-resource-names)
 - [Certification](#certification)
 
 ## Introduction
@@ -390,6 +391,26 @@ Example Policy:
 
 🚧 **TODO**
 
+## [ARN (Amazon Resource Names)](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html)
+
+General formats:
+
+```
+arn:partition:service:region:account-id:resource-id
+arn:partition:service:region:account-id:resource-type/resource-id
+arn:partition:service:region:account-id:resource-type:resource-id
+```
+
+- `partition` either:
+  - `aws` 'Standard'
+  - `aws-cn` China Regions
+  - `aws-us-gov` GovCloud Regions
+- `service` an AWS service (e.g. `s3`)
+- `region` the region (e.g. `eu-central-1`)
+- `account-id` ID of the AWS account
+- `resource-id` ID of the resource
+
+*Mind that the specific ARN depends on the resource!*
 
 ## [Certification](https://aws.amazon.com/certification)
 
