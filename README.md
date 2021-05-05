@@ -6,7 +6,6 @@ All icons and images are owned by AWS.
 
 - [ ] Describe who is the audience of this document
 - [ ] Sort services
-- [ ] Check EC2 section again
 
 ## Table of Contents
 
@@ -165,8 +164,12 @@ All icons and images are owned by AWS.
   - Instance Storage - fastest
   - [`EBS` (Elastic Block Storage)](https://aws.amazon.com/ebs/) - can only be attached to one instance
   - [`EFS` (Elastic File System)](https://aws.amazon.com/efs/) - can be shared by multiple instances
-- Hibernation
-- Spot Instances, Saving Plans, Reserved Instances
+- [Hibernation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) - write RAM into EBS and start from that again
+  ![EC2 Hibernation Flow](images/ec2_hibernation.png)
+- [Spot Instances](https://aws.amazon.com/ec2/spot/) - spare capacity, can be terminated within 2 minute notice (save up to 90% off On-Demand price)
+- [Saving Plans](https://aws.amazon.com/savingsplans/) - commitment on a certain $/hour usage for 1 or 3 years (all, partial or no upfront payment) (save up to 72%)
+  ![Saving Plans Flow](images/ec2_saving_plans.png)
+- Reserved Instances - commitment on a certain instance type or family (save up to 72%)
 
 ## [ASG (Auto Scaling Group)](https://aws.amazon.com/autoscaling/) ![EC2 ASG Icon](aws_icons/ec2_asg.png)
 
