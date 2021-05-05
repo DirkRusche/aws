@@ -55,12 +55,12 @@ All icons and images are owned by AWS.
 - `99.9%` availability SLA (but designed for `99.99%`) in `Standard`
 - Different storage classes
   - `Standard` - Low latency and high throughput
-  - `Intelligent Tiering` - Automatically optimizes storage costs (dependencing on access pattern)
+  - `Intelligent Tiering` - Automatically optimizes storage costs (depending on access pattern)
     ![S3 Lifecycle of Intelligent Tiering](images/s3_intelligent_tiering.png)
   - `Standard-IA` (IA = Infrequent-Access) - Same as Standard but less availability 
   - `One Zone-IA` - Only one AZ -> less availability
   - `Glacier` - Very cheap; retrieval time at least a few minutes
-  - `Glacier Deep Archive` - cheapest option, at least 12 hours retrievel time
+  - `Glacier Deep Archive` - cheapest option, at least 12 hours retrieval time
   - Dictates the [price](https://aws.amazon.com/s3/pricing/)
     - Standard = `$0.0245/GB`
     - Glacier Deep Archive = `$0.0018/GB` (92,65% less)
@@ -274,7 +274,7 @@ Flow within a network, passing through SG, NACL, ...
   - `CLB` (Classic Load Balancer)
     - *old, shouldn't be used for new projects*
     - previously known as ELB (before introduction of ALB)
-- Healthchecks for targets
+- Health checks for targets
 
 ## [Lambda](https://aws.amazon.com/lambda/) ![Lambda Icon](aws_icons/lambda.png)
 
