@@ -445,3 +445,4 @@ Recommendation: Udemy course from [`Stephane Maarek`](https://www.udemy.com/user
 - [awesome AWS list](https://github.com/donnemartin/awesome-aws)
 - [Open Guide to Amazon Web Services](https://github.com/open-guides/og-aws)
 - [acloudguru.com Blog](https://acloudguru.com/blog)
+- [Flashcards for learning](https://cloudbite.attejuvonen.fi)
